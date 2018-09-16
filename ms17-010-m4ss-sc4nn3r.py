@@ -3,15 +3,15 @@
 import sys
 # Python 2 Only
 if (sys.version_info > (3, 0)):
-    print('Python 3 detected')
-    print('Run this script with Python 2.x !')
+    print('[-]检测到Python3')
+    print('[-]请用Python2运行此程序！')
     sys.exit()
 import imp
 try:
     imp.find_module('ipaddress')
     import ipaddress
 except ImportError:
-    print("\n[+] ipaddress module required!")
+    print("\n[+] 需要ipaddress模块!")
     sys.exit(1)
 
 import threading
@@ -192,7 +192,7 @@ def conn(targets):
                 if data[8:10] == "\x25\x05":
                     ## 0x05 0x02 0x00 0xc0 = STATUS_INSUFF_SERVER_RESOURCES
                     if data[9:13] == "\x05\x02\x00\xc0":
-                        print("[+] "+str(targets)+" is likely VULNERABLE to MS17-010  ("+nativeos+")")
+                        print("[+] "+str(targets)+" 可能存在MS17-010漏洞  ("+nativeos+")")
                         vuln = 1
 
                 s.send(handle(data, str(targets)))
