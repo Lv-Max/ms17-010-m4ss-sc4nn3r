@@ -1,43 +1,30 @@
-# ms17-010-m4ss-sc4nn3r
-MS17-010 multithreading scanner written in python.  
-Inspired by [smb_ms17_010](https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/scanner/smb/smb_ms17_010.rb ) metasploit-framework auxiliary module  
+# Ms17-010 永恒之蓝漏洞检测工具
+用Python写的Ms17-010多线程检测工具 
+灵感来自 [smb_ms17_010](https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/scanner/smb/smb_ms17_010.rb ) metasploit-framework auxiliary module  
 <pre>
 
-                  MS17-010-m4ss-sc4nn3r v1.0
+##使用方式: ms17-010-m4ss-sc4nn3r.py ip地址 or ip/CIDR or ip/subnet
 
-                         Written by:
-                       Claudio Viviani
-
-                    http://www.homelab.it
-
-                       info@homelab.it
-                   homelabit@protonmail.ch
-
-                 https://twitter.com/homelabit
-
-
-[+]Usage: ms17-010-m4ss-sc4nn3r.py ip or ip/CIDR or ip/subnet
-
-   Example: ms17-010-m4ss-sc4nn3r.py 192.168.0.1
+   示范: ms17-010-m4ss-sc4nn3r.py 192.168.0.1
             ms17-010-m4ss-sc4nn3r.py 192.168.0.0/24
             ms17-010-m4ss-sc4nn3r.py 192.168.0.0/255.255.255.0
 
 </pre>
 
-## Requirements:
+## 环境需求:
 - Python 2.7
 - ipaddress module
 
-## Features:
+## 特点:
 <pre>
-1) Multithreading
-2) Subnet scan
-3) CIDR newtrok scan
+1) 多线程
+2) 子网扫描
+3) 无类别域间路由网络扫描
 </pre>
 
-## Windows precompiled version
+## 编译版本
 <pre>
-1) No python required
-2) No modules requred
-3) Tested on x86 and x64 Windows system
+1) 不需要Python环境
+2) 不需要任何模块
+3) 在32位和64位系统上测试通过
 </pre>
